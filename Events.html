@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhzONy5EZalHR8aa1GBaOdxeRF5IQhqgM&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Events</title>
+  </head>
+ 
+  <body>
+      
+      <nav>
+          <div class="logo">
+            <h3>Lilith</h3>
+          </div>
+          <ul class="nav-links">
+            <a href= "index.html">Home</li></a>
+            <a href= "Donate.html">Donate</li></a>
+            <a href ="Events.html">Events</li></a>
+            <a href= "contact.html">Contact</li></a>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+        <body id= "backdrop"></body>
+        <div id="map"></div>
+  
+  <script> 
+function initMap() {
+  const uluru = { lat: 51.541868, lng: -0.146625 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
+  });
+  const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    "<p><b>There is a penis museum in Iceland. Which is pretty cool. But there is no vagina equivalent anywhere in the world. We were pretty miffed (muffed?) when we learnt this but we thought, there's only one way to rectify this. Make one... The Vagina Museum was launched in 2017. Its mission is to spread knowledge and raise awareness of gynaecological anatomy and health; give confidence to people to talk about issues surrounding the gynaecological anatomy; and erase the stigma around the body and gynaecological anatomy.</p>" +
+    '<p>Attribution: The Vagina Museum, <a href="https://www.vaginamuseum.co.uk/about/story">' +
+    "https://www.vaginamuseum.co.uk/about/story</a> " +
+    "(last visited 28 October, 2020).</p>" +
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+  });
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map,
+    title: "Uluru (Ayers Rock)",
+  });
+  marker.addListener("click", () => {
+    infowindow.open(map, marker);
+  });
+}
+</script>
+  </body>
+  <footer>
+      <div class="main-content">
+        <div class="left box">
+          <div class="content">
+            <div class="social">
+              <a href="#"><span class="fab fa-facebook-f"></span></a>
+              <a href="#"><span class="fab fa-twitter"></span></a>
+              <a href="#"><span class="fab fa-instagram"></span></a>
+              <a href="#"><span class="fab fa-youtube"></span></a>
+      </div>
+          </div>
+        </div>
+        <h4>&#x24B8; 2020 Lilith</h4>
+        
+      
+        </div>
+      
+        </footer>
+</html>

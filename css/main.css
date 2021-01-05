@@ -1,0 +1,306 @@
+#backdrop2 {
+  background-image: url(../images/background.jpg);
+}
+
+nav {
+  background: #cb99c9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family: "Abril Fatface", cursive;
+  color:black;
+}
+
+iframe {
+  margin-left: 25px;
+  padding-bottom: 25px;
+  border: none;
+  padding-top: 25px;
+  justify-content: space-around
+  display:flex;
+  border-color:#fadadd;
+  border-style:solid;
+}
+
+p {
+  font-family: "Abril Fatface", cursive;
+  font-size: 20px;
+}
+h1{
+  font-family: "Abril Fatface", cursive;
+  color: #444;
+}
+
+h3 {
+  font-family: "Abril Fatface", cursive;
+  padding: 20px 0 0 0;
+  text-align: center;
+  color:#444;
+}
+h2{
+  background-color: #fadadd;
+  font-family: "Abril Fatface", cursive;
+  text-align: center;
+  padding-top: 40px;
+  color:#444;
+  letter-spacing: 3px;
+}
+.container{
+  background:#fadadd;
+}
+#introduction{
+  font-family: "Abril Fatface", cursive;
+  font-size:15px;
+  padding:18px;
+  text-align:center;
+}
+#quote{
+text-align:center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: #cb99c9;
+  color: #444;
+}
+
+.main-content {
+  display: flex;
+}
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.box.content {
+  margin: 20px 0 0 0;
+}
+
+.left .content .social {
+  margin: 30px 0 0 0;
+}
+.left .content .social a {
+  padding: 0 2px;
+  color: #fadadd;
+}
+
+.left .content .social a:hover {
+  color: #444;
+}
+h4 {
+  color: #fadadd;
+  margin: 40px 0 0 0;
+}
+
+.logo {
+  color:black;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 22px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  letter-spacing: 3px;
+}
+
+.nav-links a:hover {
+  color: #fadadd;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #444;
+  margin: 5px;
+}
+#backdrop {
+  background-color: #fadadd;
+}
+
+.btn-primary {
+  background-color: #cb99c9;
+  border-color: #cb99c9;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #444;
+  border: 1px solid #cb99c9;
+}
+
+.icon-bar {
+  width: 33px;
+  height: 4px;
+  display: block;
+  background: white;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 80vh;
+    top: 10vh;
+    background-color: #cb99c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+}
+
+h1 {
+  color: #444;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: right;
+}
+
+
+p {
+  color: #444;
+  font-size: 13px;
+}
+
+.accordion {
+  background-color: #cb99c9;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: none;
+}
+
+.active,
+.accordion:hover {
+  background-color: #fadadd;
+}
+
+.panel {
+  padding: 20px 18px;
+  background-color: #cb99c9;
+  overflow: hidden;
+  display: none;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: "\02795";
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+#map {
+  height: 100%;
+  width: 100%
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.glossary {
+  background-color: #cb99c9;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active,
+.glossary:hover {
+  background-color: #fadadd;
+}
+
+.glossaryexpand {
+  padding: 0 18px;
+  background-color: #cb99c9;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
